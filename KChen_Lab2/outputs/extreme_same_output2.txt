@@ -1,0 +1,357 @@
+original input:
+20105, 20105, 20105, 20105, 20105
+20105, 20105, 20105, 20105, 20105
+20105, 20105, 20105, 20105, 20105
+20105, 20105, 20105, 20105, 20105
+20105, 20105, 20105, 20105, 20105
+20105, 20105, 20105, 20105, 20105
+20105, 20105, 20105, 20105, 20105
+20105, 20105, 20105, 20105, 20105
+20105, 20105, 20105, 20105, 20105
+20105, 20105, 20105, 20105, 20105
+20105, 20105, 20105, 20105, 20105
+20105, 20105, 20105, 20105, 20105
+
+scheme 1 (division) - modulo: 120, bucket size: 1, linear
+# of collisions: 1770, # of comparisons: 1830, records inserted: 60, load factor: 0.5
+20105,  20105,  20105,  20105,  20105
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+
+scheme 2 (division) - modulo: 120, bucket size: 1, quadratic
+# of collisions: 1706, # of comparisons: 1754, records inserted: 48, load factor: 0.4
+20105,  None,  None,  20105,  None
+20105,  20105,  None,  20105,  None
+None,  20105,  None,  None,  None
+20105,  None,  None,  20105,  None
+20105,  20105,  None,  20105,  None
+None,  20105,  None,  None,  None
+20105,  None,  None,  20105,  None
+20105,  20105,  None,  20105,  None
+None,  20105,  None,  None,  None
+20105,  None,  None,  20105,  None
+20105,  20105,  None,  20105,  None
+None,  20105,  None,  None,  None
+20105,  None,  None,  20105,  None
+20105,  20105,  None,  20105,  None
+None,  20105,  None,  None,  None
+20105,  None,  None,  20105,  None
+20105,  20105,  None,  20105,  None
+None,  20105,  None,  None,  None
+20105,  None,  None,  20105,  None
+20105,  20105,  None,  20105,  None
+None,  20105,  None,  None,  None
+20105,  None,  None,  20105,  None
+20105,  20105,  None,  20105,  None
+None,  20105,  None,  None,  None
+error: quadratic probing cannot find any more empty slots within 120 probes
+items unable to be stored in the hash table:
+20105, 20105, 20105, 20105, 20105
+20105, 20105, 20105, 20105, 20105
+20105, 20105
+
+scheme 3 (division) - modulo: 120, bucket size: 1, chaining
+# of collisions: 59, # of comparisons: 1771, records inserted: 60, load factor: 0.5
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+
+scheme 4 (division) - modulo: 113, bucket size: 1, linear
+# of collisions: 1770, # of comparisons: 1830, records inserted: 60, load factor: 0.5
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+
+scheme 5 (division) - modulo: 113, bucket size: 1, quadratic
+# of collisions: 1706, # of comparisons: 1754, records inserted: 48, load factor: 0.4
+20105,  None,  20105,  None,  None
+20105,  None,  None,  None,  20105
+None,  None,  20105,  None,  20105
+20105,  None,  20105,  None,  None
+20105,  None,  None,  None,  20105
+None,  None,  20105,  None,  20105
+20105,  None,  20105,  None,  None
+20105,  None,  None,  None,  20105
+None,  None,  20105,  None,  20105
+20105,  None,  20105,  None,  None
+20105,  None,  None,  None,  20105
+None,  None,  20105,  None,  20105
+20105,  None,  20105,  None,  None
+20105,  None,  None,  None,  20105
+None,  None,  20105,  None,  20105
+20105,  None,  20105,  None,  None
+20105,  None,  None,  None,  20105
+None,  None,  20105,  None,  20105
+20105,  None,  20105,  None,  None
+20105,  None,  None,  None,  20105
+None,  None,  20105,  None,  20105
+20105,  None,  20105,  None,  None
+20105,  None,  None,  None,  20105
+None,  None,  20105,  None,  20105
+error: quadratic probing cannot find any more empty slots within 120 probes
+items unable to be stored in the hash table:
+20105, 20105, 20105, 20105, 20105
+20105, 20105, 20105, 20105, 20105
+20105, 20105
+
+scheme 6 (division) - modulo: 113, bucket size: 1, chaining
+# of collisions: 59, # of comparisons: 1771, records inserted: 60, load factor: 0.5
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+
+scheme 7 (division) - modulo: 41, bucket size: 3, linear
+# of collisions: 570, # of comparisons: 1830, records inserted: 60, load factor: 1.5
+[None, None, None]
+[None, None, None]
+[None, None, None]
+[None, None, None]
+[None, None, None]
+[None, None, None]
+[None, None, None]
+[None, None, None]
+[None, None, None]
+[None, None, None]
+[None, None, None]
+[None, None, None]
+[None, None, None]
+[None, None, None]
+[None, None, None]
+[20105, 20105, 20105]
+[20105, 20105, 20105]
+[20105, 20105, 20105]
+[20105, 20105, 20105]
+[20105, 20105, 20105]
+[20105, 20105, 20105]
+[20105, 20105, 20105]
+[20105, 20105, 20105]
+[20105, 20105, 20105]
+[20105, 20105, 20105]
+[20105, 20105, 20105]
+[20105, 20105, 20105]
+[20105, 20105, 20105]
+[20105, 20105, 20105]
+[20105, 20105, 20105]
+[20105, 20105, 20105]
+[20105, 20105, 20105]
+[20105, 20105, 20105]
+[20105, 20105, 20105]
+[20105, 20105, 20105]
+[None, None, None]
+[None, None, None]
+[None, None, None]
+[None, None, None]
+[None, None, None]
+
+scheme 8 (division) - modulo: 41, bucket size: 3, quadratic
+# of collisions: 642, # of comparisons: 2046, records inserted: 60, load factor: 1.5
+[20105, 20105, 20105]
+[20105, 20105, 20105]
+[None, None, None]
+[20105, 20105, 20105]
+[None, None, None]
+[20105, 20105, 20105]
+[20105, 20105, 20105]
+[None, None, None]
+[20105, 20105, 20105]
+[None, None, None]
+[None, None, None]
+[20105, 20105, 20105]
+[None, None, None]
+[20105, 20105, 20105]
+[None, None, None]
+[20105, 20105, 20105]
+[20105, 20105, 20105]
+[None, None, None]
+[20105, 20105, 20105]
+[None, None, None]
+[20105, 20105, 20105]
+[20105, 20105, 20105]
+[None, None, None]
+[None, None, None]
+[None, None, None]
+[20105, 20105, 20105]
+[20105, 20105, 20105]
+[None, None, None]
+[20105, 20105, 20105]
+[None, None, None]
+[20105, 20105, 20105]
+[20105, 20105, 20105]
+[None, None, None]
+[None, None, None]
+[None, None, None]
+[20105, 20105, 20105]
+[20105, 20105, 20105]
+[None, None, None]
+[None, None, None]
+[None, None, None]
+
+scheme 9 (multiplication) - bucket size: 1, linear
+# of collisions: 1770, # of comparisons: 1830, records inserted: 60, load factor: 0.5
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+
+scheme 10 (multiplication) - bucket size: 1, quadratic
+# of collisions: 1706, # of comparisons: 1754, records inserted: 48, load factor: 0.4
+None,  None,  None,  20105,  None
+None,  20105,  None,  20105,  20105
+None,  20105,  None,  None,  20105
+None,  None,  None,  20105,  None
+None,  20105,  None,  20105,  20105
+None,  20105,  None,  None,  20105
+None,  None,  None,  20105,  None
+None,  20105,  None,  20105,  20105
+None,  20105,  None,  None,  20105
+None,  None,  None,  20105,  None
+None,  20105,  None,  20105,  20105
+None,  20105,  None,  None,  20105
+None,  None,  None,  20105,  None
+None,  20105,  None,  20105,  20105
+None,  20105,  None,  None,  20105
+None,  None,  None,  20105,  None
+None,  20105,  None,  20105,  20105
+None,  20105,  None,  None,  20105
+None,  None,  None,  20105,  None
+None,  20105,  None,  20105,  20105
+None,  20105,  None,  None,  20105
+None,  None,  None,  20105,  None
+None,  20105,  None,  20105,  20105
+None,  20105,  None,  None,  20105
+error: quadratic probing cannot find any more empty slots within 120 probes
+items unable to be stored in the hash table:
+20105, 20105, 20105, 20105, 20105
+20105, 20105, 20105, 20105, 20105
+20105, 20105
+
+scheme 11 (multiplication) - bucket size: 1, chaining
+# of collisions: 59, # of comparisons: 1771, records inserted: 60, load factor: 0.5
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105
+20105,  20105,  20105,  20105,  20105

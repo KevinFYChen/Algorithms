@@ -1,0 +1,32 @@
+order: 2
+A:
+ [[2. 1.]
+ [1. 5.]]
+B:
+[[6. 7.]
+ [4. 3.]]
+product:
+[[16 17]
+ [26 22]]
+number of multiplications: Strassen's=7, ordinary=8
+
+order: 4
+A:
+ [[ 3.  2.  3.  4.]
+ [-1.  2.  0.  1.]
+ [ 2.  3. -1. -2.]
+ [ 5.  1.  1.  0.]]
+B:
+[[-1.  2. -1.  0.]
+ [ 3. -1.  0.  2.]
+ [-4.  0. -3.  1.]
+ [ 0. -2.  1.  2.]]
+product:
+[[-9 -4 -8 15]
+ [ 7 -6  2  6]
+ [11  5 -1  1]
+ [-6  9 -8  3]]
+number of multiplications: Strassen's=49, ordinary=64
+
+-4  0 -3  1
+invalid input: order of matrix must be a single positive integer

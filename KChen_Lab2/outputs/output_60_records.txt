@@ -1,0 +1,342 @@
+original input:
+99853, 13910, 44092, 44679, 44926
+89134, 79508, 85099, 38704, 67177
+9480, 95857, 62848, 5830, 77356
+3346, 85215, 58145, 74300, 59931
+14033, 60778, 2304, 89146, 17977
+66534, 80921, 89545, 21738, 64902
+25749, 45559, 23370, 2429, 74195
+81134, 60325, 42556, 84058, 81942
+82316, 96437, 85964, 24994, 84584
+36628, 5538, 59412, 51256, 20569
+38371, 42257, 39840, 62900, 455
+65219, 12487, 28715, 65679, 92050
+
+scheme 1 (division) - modulo: 120, bucket size: 1, linear
+# of collisions: 17, # of comparisons: 77, records inserted: 60, load factor: 0.5
+9480,  39840,  None,  None,  None
+None,  None,  12487,  None,  None
+92050,  None,  59412,  99853,  81134
+85215,  51256,  42257,  21738,  85099
+74300,  5538,  62900,  None,  2304
+89545,  None,  None,  36628,  2429
+None,  None,  None,  None,  24994
+74195,  28715,  None,  None,  44679
+65679,  80921,  None,  None,  85964
+None,  44926,  None,  None,  20569
+None,  59931,  44092,  None,  66534
+None,  None,  None,  60778,  84058
+65219,  None,  None,  None,  38704
+58145,  None,  None,  79508,  25749
+5830,  None,  None,  None,  None
+None,  77356,  42556,  96437,  45559
+None,  None,  None,  None,  None
+60325,  None,  None,  62848,  None
+23370,  38371,  None,  None,  89134
+455,  None,  67177,  95857,  17977
+None,  None,  64902,  81942,  84584
+None,  3346,  89146,  None,  None
+13910,  None,  None,  14033,  None
+None,  82316,  None,  None,  None
+
+scheme 2 (division) - modulo: 120, bucket size: 1, quadratic
+# of collisions: 16, # of comparisons: 76, records inserted: 60, load factor: 0.5
+9480,  39840,  None,  None,  None
+None,  None,  12487,  None,  None
+92050,  None,  59412,  99853,  81134
+85215,  51256,  42257,  21738,  85099
+74300,  5538,  None,  62900,  2304
+89545,  None,  None,  36628,  2429
+None,  None,  None,  None,  24994
+74195,  28715,  None,  None,  44679
+65679,  80921,  None,  None,  85964
+None,  44926,  None,  None,  20569
+None,  59931,  44092,  None,  66534
+None,  None,  None,  60778,  84058
+65219,  None,  None,  None,  38704
+58145,  None,  None,  79508,  25749
+5830,  None,  None,  None,  None
+None,  77356,  42556,  96437,  45559
+None,  None,  None,  None,  None
+60325,  None,  None,  62848,  None
+23370,  38371,  None,  None,  89134
+455,  None,  67177,  95857,  None
+17977,  None,  64902,  81942,  84584
+None,  3346,  89146,  None,  None
+13910,  None,  None,  14033,  None
+None,  82316,  None,  None,  None
+
+scheme 3 (division) - modulo: 120, bucket size: 1, chaining
+# of collisions: 12, # of comparisons: 61, records inserted: 60, load factor: 0.5
+9480,  None,  None,  None,  None
+None,  None,  12487,  None,  None
+92050,  None,  59412,  99853,  81134
+85215,  51256,  42257,  21738,  85099
+74300,  None,  None,  None,  2304
+89545,  None,  None,  36628,  2429
+None,  None,  None,  None,  24994
+74195,  None,  None,  None,  44679
+None,  80921,  None,  None,  85964
+None,  44926,  None,  None,  20569
+None,  59931,  44092,  None,  66534
+None,  None,  None,  60778,  65219
+None,  None,  None,  None,  38704
+58145,  None,  None,  79508,  25749
+5830,  None,  None,  None,  None
+None,  77356,  96437,  None,  45559
+None,  None,  None,  None,  None
+60325,  None,  None,  62848,  None
+23370,  38371,  None,  None,  89134
+455,  None,  67177,  None,  None
+None,  None,  64902,  None,  84584
+65679,  3346,  28715,  62900,  39840
+13910,  5538,  82316,  14033,  81942
+84058,  42556,  17977,  89146,  95857
+
+scheme 4 (division) - modulo: 113, bucket size: 1, linear
+# of collisions: 46, # of comparisons: 106, records inserted: 60, load factor: 0.5
+81134,  5538,  None,  20569,  455
+None,  None,  None,  None,  None
+85099,  13910,  17977,  85215,  80921
+28715,  36628,  81942,  65219,  None
+62848,  14033,  44092,  45559,  24994
+None,  65679,  None,  None,  None
+None,  None,  None,  95857,  None
+None,  None,  None,  None,  None
+64902,  59931,  21738,  None,  44679
+2304,  None,  None,  96437,  89545
+None,  None,  82316,  None,  None
+67177,  2429,  12487,  38704,  74300
+84584,  None,  None,  58145,  77356
+44926,  38371,  5830,  74195,  79508
+3346,  42556,  51256,  39840,  99853
+62900,  92050,  None,  None,  None
+None,  None,  None,  None,  85964
+None,  None,  59412,  None,  None
+89134,  66534,  23370,  None,  None
+None,  60325,  60778,  25749,  84058
+None,  9480,  89146,  None,  None
+None,  None,  None,  42257,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+
+scheme 5 (division) - modulo: 113, bucket size: 1, quadratic
+# of collisions: 40, # of comparisons: 100, records inserted: 60, load factor: 0.5
+81134,  5538,  None,  20569,  455
+None,  None,  None,  None,  None
+85099,  13910,  None,  85215,  80921
+None,  17977,  81942,  65219,  36628
+62848,  14033,  44092,  45559,  24994
+None,  65679,  None,  28715,  None
+None,  None,  None,  95857,  None
+None,  None,  None,  None,  None
+64902,  59931,  21738,  None,  44679
+2304,  None,  None,  96437,  89545
+None,  None,  82316,  None,  None
+67177,  2429,  12487,  38704,  74300
+84584,  None,  None,  58145,  77356
+44926,  None,  5830,  74195,  79508
+3346,  42556,  62900,  51256,  99853
+None,  None,  None,  92050,  38371
+None,  None,  None,  None,  85964
+39840,  None,  59412,  None,  None
+89134,  66534,  23370,  None,  None
+None,  60325,  60778,  25749,  84058
+None,  9480,  89146,  None,  None
+None,  None,  None,  42257,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+
+scheme 6 (division) - modulo: 113, bucket size: 1, chaining
+# of collisions: 14, # of comparisons: 63, records inserted: 60, load factor: 0.5
+81134,  5538,  None,  20569,  None
+None,  None,  None,  None,  None
+85099,  13910,  None,  85215,  None
+None,  36628,  81942,  65219,  None
+62848,  14033,  44092,  None,  None
+None,  65679,  None,  None,  None
+None,  None,  None,  95857,  None
+None,  None,  None,  None,  None
+64902,  59931,  21738,  None,  44679
+None,  None,  None,  96437,  89545
+None,  None,  82316,  None,  None
+67177,  2429,  12487,  38704,  74300
+84584,  None,  None,  58145,  77356
+44926,  None,  5830,  42556,  79508
+None,  None,  62900,  None,  99853
+None,  None,  None,  None,  None
+None,  None,  None,  None,  85964
+None,  None,  59412,  None,  None
+89134,  None,  23370,  None,  None
+None,  60325,  60778,  25749,  84058
+None,  9480,  89146,  None,  None
+92050,  28715,  455,  42257,  39840
+38371,  51256,  24994,  74195,  45559
+80921,  66534,  17977,  2304,  3346
+
+scheme 7 (division) - modulo: 41, bucket size: 3, linear
+# of collisions: 9, # of comparisons: 124, records inserted: 60, load factor: 1.5
+[89134, 38704, 95857]
+[89545, 64902, 25749]
+[23370, 84584, None]
+[5538, 59412, None]
+[455, None, None]
+[96437, 92050, None]
+[51256, 62900, None]
+[58145, None, None]
+[5830, 74300, 2304]
+[79508, 9480, 21738]
+[45559, 2429, 84058]
+[13910, 14033, None]
+[89146, None, None]
+[None, None, None]
+[60325, None, None]
+[36628, 28715, None]
+[60778, None, None]
+[44092, 85215, None]
+[99853, None, None]
+[67177, 17977, None]
+[None, None, None]
+[None, None, None]
+[None, None, None]
+[12487, None, None]
+[85099, 81942, None]
+[3346, 24994, None]
+[74195, None, None]
+[42257, None, None]
+[80921, 85964, 20569]
+[82316, 39840, 65219]
+[44679, 77356, 59931]
+[44926, None, None]
+[66534, None, None]
+[None, None, None]
+[None, None, None]
+[None, None, None]
+[62848, 81134, 38371]
+[None, None, None]
+[65679, None, None]
+[42556, None, None]
+
+scheme 8 (division) - modulo: 41, bucket size: 3, quadratic
+# of collisions: 10, # of comparisons: 128, records inserted: 60, load factor: 1.5
+[89134, 38704, 95857]
+[89545, 64902, 25749]
+[84584, None, None]
+[23370, 5538, 59412]
+[455, None, None]
+[96437, 92050, None]
+[51256, 62900, None]
+[58145, None, None]
+[5830, 74300, 2304]
+[79508, 9480, 21738]
+[2429, None, None]
+[13910, 14033, 45559]
+[89146, None, None]
+[None, None, None]
+[60325, 84058, None]
+[36628, 28715, None]
+[60778, None, None]
+[44092, 85215, None]
+[99853, None, None]
+[67177, 17977, None]
+[None, None, None]
+[None, None, None]
+[None, None, None]
+[12487, None, None]
+[85099, 81942, None]
+[3346, 24994, None]
+[74195, None, None]
+[42257, None, None]
+[80921, 85964, 20569]
+[82316, 39840, 65219]
+[44679, 77356, 59931]
+[44926, None, None]
+[66534, None, None]
+[None, None, None]
+[None, None, None]
+[None, None, None]
+[62848, 81134, 38371]
+[None, None, None]
+[65679, None, None]
+[42556, None, None]
+
+scheme 9 (multiplication) - bucket size: 1, linear
+# of collisions: 39, # of comparisons: 99, records inserted: 60, load factor: 0.5
+None,  45559,  None,  74195,  92050
+None,  42556,  None,  85099,  None
+82316,  None,  None,  None,  None
+None,  44679,  5830,  24994,  None
+None,  None,  None,  None,  62848
+2429,  455,  None,  None,  None
+89146,  42257,  66534,  None,  None
+None,  None,  None,  None,  None
+20569,  96437,  44092,  36628,  62900
+None,  38704,  59931,  17977,  12487
+None,  None,  None,  None,  23370
+None,  39840,  None,  None,  None
+None,  None,  None,  None,  None
+99853,  None,  65219,  81134,  38371
+58145,  None,  None,  None,  None
+None,  77356,  79508,  64902,  59412
+67177,  85964,  5538,  None,  84058
+None,  None,  None,  None,  None
+25749,  85215,  None,  None,  84584
+44926,  None,  None,  21738,  None
+89134,  28715,  13910,  89545,  14033
+60778,  95857,  65679,  60325,  None
+None,  74300,  80921,  3346,  2304
+9480,  81942,  51256,  None,  None
+
+scheme 10 (multiplication) - bucket size: 1, quadratic
+# of collisions: 36, # of comparisons: 96, records inserted: 60, load factor: 0.5
+None,  45559,  None,  74195,  92050
+None,  42556,  None,  85099,  None
+82316,  None,  None,  None,  None
+None,  44679,  5830,  65679,  24994
+None,  None,  None,  None,  62848
+2429,  None,  455,  None,  None
+89146,  42257,  66534,  None,  None
+None,  None,  None,  None,  None
+20569,  96437,  44092,  62900,  36628
+None,  38704,  59931,  17977,  12487
+None,  None,  None,  None,  23370
+None,  39840,  None,  None,  None
+None,  None,  None,  None,  None
+99853,  None,  65219,  81134,  38371
+58145,  None,  None,  None,  None
+None,  77356,  79508,  64902,  59412
+67177,  85964,  None,  5538,  84058
+None,  None,  None,  None,  None
+25749,  85215,  None,  None,  84584
+44926,  None,  None,  21738,  None
+89134,  28715,  13910,  89545,  14033
+60778,  95857,  None,  60325,  None
+None,  74300,  80921,  3346,  2304
+9480,  None,  51256,  81942,  None
+
+scheme 11 (multiplication) - bucket size: 1, chaining
+# of collisions: 20, # of comparisons: 65, records inserted: 60, load factor: 0.5
+None,  45559,  None,  74195,  None
+None,  42556,  None,  85099,  None
+82316,  None,  None,  None,  None
+None,  44679,  None,  None,  None
+None,  None,  None,  None,  62848
+None,  None,  None,  None,  None
+89146,  42257,  66534,  None,  None
+None,  None,  None,  None,  None
+20569,  96437,  44092,  None,  None
+None,  38704,  59931,  None,  None
+None,  None,  None,  None,  23370
+None,  39840,  None,  None,  None
+None,  None,  None,  None,  None
+99853,  None,  65219,  81134,  38371
+58145,  None,  None,  None,  None
+None,  77356,  79508,  None,  None
+67177,  None,  None,  None,  84058
+None,  92050,  65679,  28715,  12487
+25749,  85215,  455,  62900,  84584
+44926,  51256,  59412,  21738,  5538
+89134,  36628,  13910,  24994,  14033
+85964,  95857,  81942,  60325,  2429
+64902,  74300,  89545,  3346,  2304
+9480,  80921,  17977,  60778,  5830

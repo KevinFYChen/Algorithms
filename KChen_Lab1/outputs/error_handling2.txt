@@ -1,0 +1,2 @@
+2 3
+invalid input: order of matrix must be a single positive integer

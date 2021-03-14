@@ -1,0 +1,336 @@
+original input:
+79165, 95971, 1290, 83514, 11152
+46623, 99429, 54709, 35429, 1967
+4019, 92249, 96810, 93438, 34639
+59853, 87417, 37056, 79935, 88639
+62307, 3071, 80625, 84062, 36067
+80923, 60496, 40143, 59254, 78455
+
+scheme 1 (division) - modulo: 120, bucket size: 1, linear
+# of collisions: 4, # of comparisons: 34, records inserted: 30, load factor: 0.25
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+79935,  60496,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  62307,  None,  35429
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  80923,  None
+None,  None,  1967,  None,  None
+None,  None,  None,  None,  None
+None,  None,  87417,  None,  4019
+None,  None,  84062,  46623,  40143
+None,  None,  36067,  None,  99429
+None,  3071,  None,  None,  None
+None,  None,  None,  93438,  34639
+88639,  None,  None,  None,  None
+79165,  None,  None,  None,  92249
+1290,  95971,  96810,  59853,  59254
+78455,  37056,  None,  None,  None
+None,  None,  None,  None,  None
+80625,  None,  None,  None,  54709
+None,  None,  11152,  None,  83514
+None,  None,  None,  None,  None
+
+scheme 2 (division) - modulo: 120, bucket size: 1, quadratic
+# of collisions: 8, # of comparisons: 38, records inserted: 30, load factor: 0.25
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+79935,  60496,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  62307,  None,  35429
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  80923,  None
+None,  None,  1967,  None,  None
+None,  None,  None,  None,  None
+None,  None,  87417,  None,  4019
+None,  None,  84062,  46623,  40143
+None,  None,  36067,  None,  99429
+None,  3071,  None,  None,  None
+None,  None,  None,  93438,  34639
+88639,  None,  None,  None,  None
+79165,  None,  None,  None,  92249
+1290,  95971,  None,  96810,  59853
+59254,  37056,  None,  78455,  None
+None,  None,  None,  None,  None
+80625,  None,  None,  None,  54709
+None,  None,  11152,  None,  83514
+None,  None,  None,  None,  None
+
+scheme 3 (division) - modulo: 120, bucket size: 1, chaining
+# of collisions: 3, # of comparisons: 30, records inserted: 30, load factor: 0.25
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+79935,  60496,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  62307,  None,  35429
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  80923,  None
+None,  None,  1967,  None,  None
+None,  None,  None,  None,  None
+None,  None,  87417,  None,  4019
+None,  None,  84062,  46623,  None
+None,  None,  36067,  None,  99429
+None,  3071,  None,  None,  None
+None,  None,  None,  93438,  34639
+None,  None,  None,  None,  None
+79165,  None,  None,  None,  92249
+1290,  95971,  None,  59853,  59254
+78455,  37056,  None,  None,  None
+None,  None,  None,  None,  None
+80625,  None,  None,  None,  54709
+None,  None,  11152,  None,  83514
+None,  None,  40143,  88639,  96810
+
+scheme 4 (division) - modulo: 113, bucket size: 1, linear
+# of collisions: 5, # of comparisons: 35, records inserted: 30, load factor: 0.25
+None,  None,  None,  None,  None
+None,  None,  83514,  None,  None
+None,  None,  None,  None,  None
+80923,  None,  54709,  None,  None
+3071,  36067,  None,  None,  None
+None,  None,  None,  40143,  None
+None,  None,  None,  78455,  95971
+None,  None,  None,  None,  None
+None,  92249,  60496,  59254,  79935
+62307,  1967,  1290,  88639,  None
+None,  None,  None,  None,  None
+None,  80625,  None,  None,  None
+35429,  34639,  None,  None,  4019
+79165,  None,  46623,  87417,  None
+None,  None,  None,  None,  None
+None,  59853,  None,  11152,  None
+None,  None,  96810,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+93438,  None,  99429,  84062,  None
+37056,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+
+scheme 5 (division) - modulo: 113, bucket size: 1, quadratic
+# of collisions: 5, # of comparisons: 35, records inserted: 30, load factor: 0.25
+None,  None,  None,  None,  None
+None,  None,  83514,  None,  None
+None,  None,  None,  None,  None
+80923,  None,  54709,  None,  None
+3071,  36067,  None,  None,  None
+None,  None,  None,  40143,  None
+None,  None,  None,  78455,  95971
+None,  None,  None,  None,  None
+None,  92249,  60496,  59254,  79935
+62307,  1967,  1290,  88639,  None
+None,  None,  None,  None,  None
+None,  80625,  None,  None,  None
+35429,  34639,  None,  None,  4019
+79165,  None,  46623,  87417,  None
+None,  None,  None,  None,  None
+None,  59853,  None,  11152,  None
+None,  None,  96810,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+93438,  None,  99429,  84062,  None
+37056,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+
+scheme 6 (division) - modulo: 113, bucket size: 1, chaining
+# of collisions: 4, # of comparisons: 30, records inserted: 30, load factor: 0.25
+None,  None,  None,  None,  None
+None,  None,  83514,  None,  None
+None,  None,  None,  None,  None
+80923,  None,  54709,  None,  None
+3071,  None,  None,  None,  None
+None,  None,  None,  40143,  None
+None,  None,  None,  78455,  95971
+None,  None,  None,  None,  None
+None,  92249,  59254,  None,  79935
+None,  1967,  1290,  None,  None
+None,  None,  None,  None,  None
+None,  80625,  None,  None,  None
+35429,  34639,  None,  None,  4019
+79165,  None,  46623,  87417,  None
+None,  None,  None,  None,  None
+None,  59853,  None,  11152,  None
+None,  None,  96810,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+93438,  None,  99429,  84062,  None
+37056,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  60496,  36067,  62307,  88639
+
+scheme 7 (division) - modulo: 41, bucket size: 3, linear
+# of collisions: 1, # of comparisons: 44, records inserted: 30, load factor: 0.75
+[11152, 1967, 92249]
+[4019, 93438, None]
+[None, None, None]
+[None, None, None]
+[99429, 40143, None]
+[35429, 87417, None]
+[46623, None, None]
+[None, None, None]
+[None, None, None]
+[96810, 59254, None]
+[None, None, None]
+[None, None, None]
+[84062, None, None]
+[None, None, None]
+[None, None, None]
+[54709, None, None]
+[None, None, None]
+[None, None, None]
+[None, None, None]
+[1290, 80625, None]
+[None, None, None]
+[60496, None, None]
+[78455, None, None]
+[None, None, None]
+[None, None, None]
+[None, None, None]
+[79935, None, None]
+[None, None, None]
+[62307, 36067, None]
+[None, None, None]
+[80923, None, None]
+[95971, None, None]
+[None, None, None]
+[37056, None, None]
+[59853, None, None]
+[79165, 34639, None]
+[None, None, None]
+[3071, None, None]
+[83514, 88639, None]
+[None, None, None]
+
+scheme 8 (division) - modulo: 41, bucket size: 3, quadratic
+# of collisions: 1, # of comparisons: 44, records inserted: 30, load factor: 0.75
+[11152, 1967, 92249]
+[4019, 93438, None]
+[None, None, None]
+[None, None, None]
+[99429, 40143, None]
+[35429, 87417, None]
+[46623, None, None]
+[None, None, None]
+[None, None, None]
+[96810, 59254, None]
+[None, None, None]
+[None, None, None]
+[84062, None, None]
+[None, None, None]
+[None, None, None]
+[54709, None, None]
+[None, None, None]
+[None, None, None]
+[None, None, None]
+[1290, 80625, None]
+[None, None, None]
+[60496, None, None]
+[78455, None, None]
+[None, None, None]
+[None, None, None]
+[None, None, None]
+[79935, None, None]
+[None, None, None]
+[62307, 36067, None]
+[None, None, None]
+[80923, None, None]
+[95971, None, None]
+[None, None, None]
+[37056, None, None]
+[59853, None, None]
+[79165, 34639, None]
+[None, None, None]
+[3071, None, None]
+[83514, 88639, None]
+[None, None, None]
+
+scheme 9 (multiplication) - bucket size: 1, linear
+# of collisions: 4, # of comparisons: 34, records inserted: 30, load factor: 0.25
+None,  None,  54709,  92249,  None
+None,  None,  None,  None,  34639
+None,  None,  None,  None,  None
+None,  None,  None,  None,  80923
+84062,  None,  59853,  None,  None
+None,  None,  None,  None,  None
+None,  1290,  None,  None,  None
+None,  None,  11152,  None,  35429
+95971,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  83514,  None
+99429,  None,  None,  None,  None
+79935,  None,  None,  None,  None
+60496,  46623,  None,  None,  None
+36067,  None,  None,  None,  79165
+1967,  87417,  None,  None,  None
+None,  None,  None,  40143,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  62307,  78455,  93438,  96810
+4019,  37056,  None,  None,  88639
+None,  None,  None,  None,  None
+None,  None,  3071,  80625,  59254
+
+scheme 10 (multiplication) - bucket size: 1, quadratic
+# of collisions: 4, # of comparisons: 34, records inserted: 30, load factor: 0.25
+None,  None,  54709,  92249,  None
+None,  None,  None,  None,  34639
+None,  None,  None,  None,  None
+None,  None,  None,  None,  80923
+84062,  None,  59853,  None,  None
+None,  None,  None,  None,  None
+None,  1290,  None,  None,  None
+None,  None,  11152,  None,  35429
+95971,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  83514,  None
+99429,  None,  None,  None,  None
+79935,  None,  None,  None,  None
+60496,  46623,  None,  None,  None
+36067,  None,  None,  None,  79165
+1967,  87417,  None,  None,  None
+None,  None,  None,  40143,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  62307,  78455,  93438,  96810
+4019,  None,  37056,  None,  88639
+None,  None,  None,  None,  None
+None,  None,  3071,  80625,  59254
+
+scheme 11 (multiplication) - bucket size: 1, chaining
+# of collisions: 4, # of comparisons: 31, records inserted: 30, load factor: 0.25
+None,  None,  54709,  None,  None
+None,  None,  None,  None,  34639
+None,  None,  None,  None,  None
+None,  None,  None,  None,  80923
+84062,  None,  59853,  None,  None
+None,  None,  None,  None,  None
+None,  1290,  None,  None,  None
+None,  None,  11152,  None,  35429
+95971,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  None,  None,  83514,  None
+99429,  None,  None,  None,  None
+79935,  None,  None,  None,  None
+60496,  46623,  None,  None,  None
+36067,  None,  None,  None,  79165
+1967,  87417,  None,  None,  None
+None,  None,  None,  40143,  None
+None,  None,  None,  None,  None
+None,  None,  None,  None,  None
+None,  62307,  78455,  93438,  96810
+4019,  None,  None,  None,  88639
+None,  None,  None,  None,  None
+59254,  80625,  3071,  37056,  92249

@@ -1,0 +1,37 @@
+required input sequences:
+ACCGGTCGACTGCGCGGAAGCCGGCCGAA
+GTCGTTCGGAATGCCGTTGCTCTGTAAA
+ATTGCATTGCATGGGCGCGATGCATTTGGTTAATTCCTCG
+CTTGCTTAAATGTGCA
+
+
+comparing between the required input strings:
+LCS between S1 and S2:
+GTCGTCGGAAGCCGGCCGAA
+length of LCS: 20, # of comparisons: 1631
+
+LCS between S1 and S3:
+ACCGGCGATGCGGAACCCG
+length of LCS: 19, # of comparisons: 2358
+
+LCS between S1 and S4:
+CTGCTAAGGCA
+length of LCS: 11, # of comparisons: 875
+
+LCS between S2 and S3:
+GCTTCGGGCCGTGCTTGTAA
+length of LCS: 20, # of comparisons: 2235
+
+LCS between S2 and S4:
+GCTTAATGTGCA
+length of LCS: 12, # of comparisons: 837
+
+LCS between S3 and S4:
+TTGCTTATGTGCA
+length of LCS: 13, # of comparisons: 1169
+
+
+comparing the test cases to each of the required input strings:
+
+error sequence: CTAGTGATACTATCAGTCCGCATAAG12TACCTC
+sequence contains character(s) that is not A,T,C or G

@@ -1,0 +1,15 @@
+order: 2
+A:
+ [[2. 1.]
+ [1. 5.]]
+B:
+[[6. 7.]
+ [4. 3.]]
+product:
+[[16 17]
+ [26 22]]
+number of multiplications: Strassen's=7, ordinary=8
+
+4
+5  1  1  0 10
+error - order: 4, number of integers in line: 5

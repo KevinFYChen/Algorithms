@@ -1,0 +1,14 @@
+order: 2
+A:
+ [[2. 1.]
+ [1. 5.]]
+B:
+[[6. 7.]
+ [4. 3.]]
+product:
+[[16 17]
+ [26 22]]
+number of multiplications: Strassen's=7, ordinary=8
+
+A
+invalid input: the order of the matrix is not an integer

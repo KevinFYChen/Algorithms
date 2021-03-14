@@ -1,0 +1,1 @@
+error: not all of the 4 required strings are detected, please make sure the required strings are prefixed with 'S1/S2/S3/S4 =' and please make sure that they are the first 4 lines in the input file
